@@ -1,0 +1,55 @@
+
+@mixin circle($width:100px,$color:#333) {
+  height: $width;
+  width: $width;
+  background: $color;
+  -webkit-border-radius: $width/2;
+  -moz-border-radius: $width/2;
+  -o-border-radius: $width/2;
+  border-radius: $width/2;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  -o-background-clip: padding-box;
+  background-clip: padding-box;
+}
+
+@mixin triangle($width,$dir:up,$color:#fff) {
+  height: 0;
+  width: 0;
+  @if $dir == up {
+    border-left: $width/2 solid transparent;
+    border-right: $width/2 solid transparent;
+    border-bottom: $width/2 solid $color;
+
+    &:hover {
+      border-bottom-color: #B4FAFA;
+    }
+  } @else
+  if $dir == down {
+    border-left: $width/2 solid transparent;
+    border-right: $width/2 solid transparent;
+    border-top: $width/2 solid $color;
+
+    &:hover {
+      border-top-color: #B4FAFA;
+    }
+  } @else
+  if $dir == right {
+    border-top: $width/2 solid transparent;
+    border-bottom: $width/2 solid transparent;
+    border-left: $width/2 solid $color;
+
+    &:hover {
+      border-left-color: #B4FAFA;
+    }
+  } @else
+  if $dir == left {
+    border-top: $width/2 solid transparent;
+    border-bottom: $width/2 solid transparent;
+    border-right: $width/2 solid $color;
+
+    &:hover {
+      border-right-color: #B4FAFA;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@import "mixins";
+@import "container";
+
+body {
+  background: #9BEDFF;
+  font-family: Arial,Helvetica,sans-serif;
+  display: flex;
+  justify-content: center;
+}

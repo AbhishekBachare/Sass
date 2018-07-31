@@ -1,0 +1,87 @@
+$head-color: #FFCC00;
+$margin: 5%;
+$margin-para: 3%;
+$grad-content: 20px;
+$fonts: #A84100;
+$cream: #f2efeb;
+$cream2: $cream - 100;
+$anchor: #fff;
+$para-color: coral;
+@mixin b-radius($radius:20px) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+body {
+  background: #595959;
+  font-family: sans-serif;
+  color: $fonts;
+}
+
+header {
+  margin: 20px $margin;
+
+  h1 {
+    color: $head-color;
+  }
+
+  h2 {
+    margin: 10px $margin+5%;
+    color: $head-color;
+  }
+}
+
+.grad {
+  padding: 1%;
+  background: #f2ffeb;
+  margin: 0 30px 30px;
+  @include b-radius(30px);
+  background-image: -webkit-gradient(linear,left top,left bottom,from($cream),to($cream2));
+  background-image: -webkit-linear-gradient(top,$cream,$cream2);
+  background-image: -moz-linear-gradient(top,$cream,$cream2);
+  background-image: -ms-linear-gradient(top,$cream,$cream2);
+  background-image: -o-linear-gradient(top,$cream,$cream2);
+  background-image: linear-gradient(top,$cream,$cream2);
+
+  h2 {
+    margin: $grad-content $margin;
+    color: coral;
+  }
+
+  .intro {
+    @include b-radius(30px);
+    background: #333;
+    margin: 20px;
+    font-weight: bold;
+
+    .par1 {
+      padding: $grad-content $margin;
+      color: $para-color;
+
+      a {
+        font-size: 20px;
+        font-style: italic;
+        text-decoration: none;
+        background: $anchor;
+        @include b-radius(10px);
+        padding: 0 20px;
+      }
+
+      a:hover {
+        background: #666;
+        color: $anchor;
+      }
+    }
+  }
+
+  .feature {
+    @extend .intro;
+    border: 2px solid $para-color;
+  }
+}
+
+.par {
+  margin: 20px;
+  font-weight: bold;
+}

@@ -1,0 +1,194 @@
+$head-color: #FFCC00;
+$margin: 5%;
+$margin-para: 3%;
+$grad-content: 20px;
+$fonts: #A84100;
+$cream: #f2efeb;
+$cream2: $cream - 100;
+$anchor: #fff;
+$para-color: coral;
+
+
+
+@mixin b-radius($radius:20px) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+$icons: (
+  twitter,
+  gplus,
+  facebook,
+  rss
+);
+
+@each $social in $icons {
+  .#{$social} {
+    background: url("../img/#{$social}.png") no-repeat;
+  }
+}
+
+@function text-contrast($background) {
+  @if lightness($background) < 50% {
+    @return lighten($background, 35%);
+  } @else {
+    @return darken($background, 35%);
+  }
+}
+
+body {
+  background: #AF62AB;
+  font-family: sans-serif;
+  color: $fonts;
+}
+
+header {
+  margin: 20px $margin;
+
+  h1 {
+    color: $head-color;
+  }
+
+  h2 {
+    margin: 10px $margin + 5%;
+    color: $head-color;
+  }
+}
+
+.grad {
+  padding: 1%;
+  margin: 0 30px 30px;
+  @include b-radius(10px);
+  background-image: -webkit-gradient(linear,left top,left bottom,from($cream),to($cream2));
+  background-image: -webkit-linear-gradient(top,$cream,$cream2);
+  background-image: -moz-linear-gradient(top,$cream,$cream2);
+  background-image: -ms-linear-gradient(top,$cream,$cream2);
+  background-image: -o-linear-gradient(top,$cream,$cream2);
+  background-image: linear-gradient(top,$cream,$cream2);
+
+  h2 {
+    margin: $grad-content $margin;
+    color: coral;
+  }
+
+  // -for loop :-
+  @for $i from 3 through 4{
+    .par-#{$i} {
+      margin-right: 15px * $i ;
+      margin-left: 15px * $i ;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+
+  // -while loop :-
+  $r: 1;
+  $parabg : orange;
+
+  @while $r < 5{
+    .par-#{$r} {
+      background: $parabg;
+      color: text-contrast($parabg);
+    }
+    $parabg : lighten($parabg , 10%);
+    $r : $r +1;
+  }
+
+  section {
+    margin: auto;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    @include b-radius(10px);
+  }
+
+  .intro {
+    @include b-radius(10px);
+    background: fade-out(#333,0.5);
+    margin: 20px 5px 20px 0;
+    padding: 10px;
+    font-weight: bold;
+    width: percentage(460px / 1440px);
+    float: left;
+
+    .one {
+      padding: $grad-content $margin;
+      @include b-radius(10px);
+
+      a {
+        font-size: 15px;
+        font-style: italic;
+        text-decoration: none;
+        background: $anchor;
+        @include b-radius(10px);
+        padding: 0 20px;
+      }
+
+      a:hover {
+        background: #666;
+        color: $anchor;
+      }
+    }
+  }
+
+  .feature {
+    @extend .intro;
+    width: round(percentage(760px / 1440px));
+    margin: 20px 0;
+  }
+}
+
+.two {
+  @extend .one;
+}
+
+.four,
+.three {
+  margin: 20px;
+  font-weight: bold;
+  @include b-radius(10px);
+  padding: 20px;
+}
+
+
+// Nth function in list :
+// @each $p in (one orange + 20, two orange + 40 , three black + 40, four black + 60) {
+//   .#{nth($p, 1)} {
+//     background: nth($p,2);
+//     color: text-contrast(nth($p,2));
+//   }
+// }
+// @function text-contrast($background , $value) {
+//   @return ($background + $value);
+// }
+// -OR-
+
+ul.social-icons li {
+  list-style: none;
+  display: block;
+  float: left;
+  height: 65px;
+  width: 65px;
+  margin-right: 20px;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    color: transparent;
+  }
+}
+
+.clear-fix:after,
+.clear-fix:before {
+  content: "";
+  display: table;
+}
+
+.clear-fix:after {
+  clear: both;
+}
+
+.clear-fix {
+  *zoom: 1;
+}

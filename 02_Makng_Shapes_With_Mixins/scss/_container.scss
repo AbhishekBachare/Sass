@@ -1,0 +1,41 @@
+
+.container {
+  margin: 20px auto auto;
+  width: auto;
+  display: inline-block;
+  border-radius: 20px;
+  background-color: #044DBE;
+  color: #fff;
+
+  header {
+    h1 {
+      margin: 20px 30px;
+    }
+  }
+
+  .main {
+    margin: 50px;
+
+    .circle {
+      display: block;
+      margin: 20px 0;
+      @include circle(200px,#4B92DB);
+
+      &:hover {
+        background: #B4FAFA;
+      }
+    }
+
+    .triangle {
+      display: block;
+      margin: 20px 0;
+      @include triangle(200px,down,#4B92DB);
+    }
+
+    .ir {
+      font: 0/0 a;
+      text-shadow: none;
+      color: transparent;
+    }
+  }
+}
