@@ -87,6 +87,13 @@ body {
     .sign {
       @extend %grey;
       // Nested Properties :
+      
+      // Gives :
+      // body .container div.sign {
+      //   color: grey;
+      //   font-size: 12px;
+      //   background: #222;
+      // }
       font: {
         family: Fantasy , sans-serif;
       }
@@ -101,12 +108,6 @@ body {
       @extend %grey;
       // No code repetition
     }
-    // Gives :
-    // body .container div.sign {
-    //   color: grey;
-    //   font-size: 12px;
-    //   background: #222;
-    // }
   }
 }
 // Placeholders :
