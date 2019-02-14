@@ -1,97 +1,68 @@
-/* line 1, ../scss/main.scss */
 * {
   margin: 0;
   padding: 0;
-}
+  font-family: sans-serif; }
 
-/* line 12, ../scss/main.scss */
 body {
   background: #ccc;
-  font-family: Arial,Helvetica,sans-serif;
-  color: #222;
-}
-/* line 17, ../scss/main.scss */
-body .header {
-  display: grid;
-  align-items: center;
-}
-/* line 21, ../scss/main.scss */
-body .header .navbar {
-  margin: 5px 10px 0;
-  border-radius: 10px;
-  background-color: blue;
-}
-/* line 26, ../scss/main.scss */
-body .header .navbar .nav {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  justify-content: center;
-  list-style-type: none;
-}
-/* line 33, ../scss/main.scss */
-body .header .navbar .nav .nav-items {
-  padding: 10px 0;
-  color: #fff;
-  font-weight: bold;
-  text-align: center;
-  letter-spacing: 1px;
-}
-/* line 40, ../scss/main.scss */
-body .header .navbar .nav .nav-items:hover {
-  background-color: #66A2A1;
-  color: #33691E;
-}
-/* line 46, ../scss/main.scss */
-body .header .navbar .nav .nav-items-one {
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  flex: 1;
-}
-/* line 52, ../scss/main.scss */
-body .header .navbar .nav .nav-items-two {
-  flex: 1;
-}
-/* line 56, ../scss/main.scss */
-body .header .navbar .nav .nav-items-three {
-  flex: 1;
-}
-/* line 60, ../scss/main.scss */
-body .header .navbar .nav .nav-items-four {
-  flex: 1;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-/* line 69, ../scss/main.scss */
-body .container {
-  height: 90%;
-  background: #fff;
-  margin: 10px;
-  padding: 0 10px 10px;
-  border-radius: 10px;
-}
-/* line 76, ../scss/main.scss */
-body .container .clear-fix {
-  clear: both;
-}
-/* line 80, ../scss/main.scss */
-body .container .headings {
-  font-weight: bold;
-}
-/* line 84, ../scss/main.scss */
-body .container .sign {
-  font-family: Fantasy , sans-serif;
-  border: 5px;
-  border-style: dotted;
-  border-color: tomato;
-}
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222; }
+  body .header {
+    display: grid;
+    align-items: center; }
+    body .header .navbar {
+      margin: 5px 10px 0;
+      border-radius: 10px;
+      background-color: blue; }
+      body .header .navbar .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: center;
+        list-style-type: none; }
+        body .header .navbar .nav .nav-items {
+          padding: 10px 0;
+          color: #fff;
+          font-weight: bold;
+          text-align: center;
+          letter-spacing: 1px; }
+          body .header .navbar .nav .nav-items:hover {
+            background-color: #66A2A1;
+            color: #33691E; }
+        body .header .navbar .nav .nav-items-one {
+          border-top-left-radius: 10px;
+          border-bottom-left-radius: 10px;
+          flex: 1; }
+        body .header .navbar .nav .nav-items-two {
+          flex: 1; }
+        body .header .navbar .nav .nav-items-three {
+          flex: 1; }
+        body .header .navbar .nav .nav-items-four {
+          flex: 1;
+          border-top-right-radius: 10px;
+          border-bottom-right-radius: 10px; }
+  body .container {
+    height: 90%;
+    background: #fff;
+    margin: 10px;
+    padding: 0 10px 10px;
+    border-radius: 10px; }
+    body .container .clear-fix {
+      clear: both; }
+    body .container .headings {
+      font-weight: bold; }
+    body .container .sign {
+      font-family: Fantasy , sans-serif;
+      border: 5px;
+        border-style: dotted;
+        border-color: tomato; }
 
-/* line 111, ../scss/main.scss */
 body .container .sign, body .container .box {
   color: grey;
   font-size: 12px;
   background: #222;
   margin: 10px;
   padding: 2px 10px;
-  border-radius: 10px;
-}
+  border-radius: 10px; }
+
+/*# sourceMappingURL=main.css.map */

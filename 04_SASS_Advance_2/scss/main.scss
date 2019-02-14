@@ -1,6 +1,9 @@
+$font-style : Arial,Helvetica,sans-serif;
+
 * {
   margin: 0;
   padding: 0;
+  font-family: sans-serif;
 }
 // Mixins :
 @mixin divStyle() {
@@ -11,7 +14,7 @@
 
 body {
   background: #ccc;
-  font-family: Arial,Helvetica,sans-serif;
+  font-family: $font-style;
   color: #222;
 
   .header {
@@ -96,7 +99,7 @@ body {
 
     .box {
       @extend %grey;
-      // No code repetation
+      // No code repetition
     }
     // Gives :
     // body .container div.sign {
